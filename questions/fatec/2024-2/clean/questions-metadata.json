@@ -1,0 +1,920 @@
+{
+  "1": {
+    "id": 1,
+    "imageUrl": "/questions/questao_01.png",
+    "width": 1615,
+    "height": 1392,
+    "correctAnswer": "B",
+    "discipline": "Historia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "821.2 KB",
+    "multipaginas": false
+  },
+  "2": {
+    "id": 2,
+    "imageUrl": "/questions/questao_02.png",
+    "width": 1615,
+    "height": 388,
+    "correctAnswer": "D",
+    "discipline": "Matematica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "44.3 KB",
+    "multipaginas": false
+  },
+  "3": {
+    "id": 3,
+    "imageUrl": "/questions/questao_03.png",
+    "width": 1615,
+    "height": 562,
+    "correctAnswer": "E",
+    "discipline": "Raciocinio Logico",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "91.3 KB",
+    "multipaginas": false
+  },
+  "4": {
+    "id": 4,
+    "imageUrl": "/questions/questao_04.png",
+    "width": 1615,
+    "height": 425,
+    "correctAnswer": "E",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "82.8 KB",
+    "multipaginas": false
+  },
+  "5": {
+    "id": 5,
+    "imageUrl": "/questions/questao_05.png",
+    "width": 1615,
+    "height": 585,
+    "correctAnswer": "D",
+    "discipline": "Historia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "88.3 KB",
+    "multipaginas": true
+  },
+  "6": {
+    "id": 6,
+    "imageUrl": "/questions/questao_06.png",
+    "width": 1615,
+    "height": 861,
+    "correctAnswer": "C",
+    "discipline": "Fisica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "232.9 KB",
+    "multipaginas": false
+  },
+  "7": {
+    "id": 7,
+    "imageUrl": "/questions/questao_07.png",
+    "width": 1615,
+    "height": 999,
+    "correctAnswer": "E",
+    "discipline": "Geografia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "280.6 KB",
+    "multipaginas": false
+  },
+  "8": {
+    "id": 8,
+    "imageUrl": "/questions/questao_08.png",
+    "width": 1615,
+    "height": 1094,
+    "correctAnswer": "D",
+    "discipline": "Fisica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "242.6 KB",
+    "multipaginas": true
+  },
+  "9": {
+    "id": 9,
+    "imageUrl": "/questions/questao_09.png",
+    "width": 1615,
+    "height": 1192,
+    "correctAnswer": "D",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "177.1 KB",
+    "multipaginas": false
+  },
+  "10": {
+    "id": 10,
+    "imageUrl": "/questions/questao_10.png",
+    "width": 1615,
+    "height": 1132,
+    "correctAnswer": "A",
+    "discipline": "Matematica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "170.6 KB",
+    "multipaginas": false
+  },
+  "11": {
+    "id": 11,
+    "imageUrl": "/questions/questao_11.png",
+    "width": 1615,
+    "height": 1175,
+    "correctAnswer": "E",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "173.6 KB",
+    "multipaginas": true
+  },
+  "12": {
+    "id": 12,
+    "imageUrl": "/questions/questao_12.png",
+    "width": 1615,
+    "height": 1099,
+    "correctAnswer": "B",
+    "discipline": "Geografia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "275.4 KB",
+    "multipaginas": false
+  },
+  "13": {
+    "id": 13,
+    "imageUrl": "/questions/questao_13.png",
+    "width": 1615,
+    "height": 838,
+    "correctAnswer": "D",
+    "discipline": "Ingles",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "188.9 KB",
+    "multipaginas": true
+  },
+  "14": {
+    "id": 14,
+    "imageUrl": "/questions/questao_14.png",
+    "width": 1615,
+    "height": 742,
+    "correctAnswer": "B",
+    "discipline": "Ingles",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "178.5 KB",
+    "multipaginas": false
+  },
+  "15": {
+    "id": 15,
+    "imageUrl": "/questions/questao_15.png",
+    "width": 1615,
+    "height": 1303,
+    "correctAnswer": "A",
+    "discipline": "Quimica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "210.8 KB",
+    "multipaginas": false
+  },
+  "16": {
+    "id": 16,
+    "imageUrl": "/questions/questao_16.png",
+    "width": 1615,
+    "height": 1361,
+    "correctAnswer": "C",
+    "discipline": "Quimica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "205.8 KB",
+    "multipaginas": true
+  },
+  "17": {
+    "id": 17,
+    "imageUrl": "/questions/questao_17.png",
+    "width": 1615,
+    "height": 1373,
+    "correctAnswer": "D",
+    "discipline": "Quimica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "253.1 KB",
+    "multipaginas": false
+  },
+  "18": {
+    "id": 18,
+    "imageUrl": "/questions/questao_18.png",
+    "width": 1615,
+    "height": 1575,
+    "correctAnswer": "D",
+    "discipline": "Quimica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "256.2 KB",
+    "multipaginas": false
+  },
+  "19": {
+    "id": 19,
+    "imageUrl": "/questions/questao_19.png",
+    "width": 1615,
+    "height": 958,
+    "correctAnswer": "E",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "224.1 KB",
+    "multipaginas": true
+  },
+  "20": {
+    "id": 20,
+    "imageUrl": "/questions/questao_20.png",
+    "width": 1615,
+    "height": 613,
+    "correctAnswer": "D",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "151.2 KB",
+    "multipaginas": false
+  },
+  "21": {
+    "id": 21,
+    "imageUrl": "/questions/questao_21.png",
+    "width": 1615,
+    "height": 620,
+    "correctAnswer": "E",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "136.2 KB",
+    "multipaginas": false
+  },
+  "22": {
+    "id": 22,
+    "imageUrl": "/questions/questao_22.png",
+    "width": 1615,
+    "height": 706,
+    "correctAnswer": "C",
+    "discipline": "Raciocinio Logico",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "91.1 KB",
+    "multipaginas": true
+  },
+  "23": {
+    "id": 23,
+    "imageUrl": "/questions/questao_23.png",
+    "width": 1615,
+    "height": 1140,
+    "correctAnswer": "C",
+    "discipline": "Matematica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "173.3 KB",
+    "multipaginas": false
+  },
+  "24": {
+    "id": 24,
+    "imageUrl": "/questions/questao_24.png",
+    "width": 1615,
+    "height": 811,
+    "correctAnswer": "D",
+    "discipline": "Fisica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "125.8 KB",
+    "multipaginas": true
+  },
+  "25": {
+    "id": 25,
+    "imageUrl": "/questions/questao_25.png",
+    "width": 1615,
+    "height": 850,
+    "correctAnswer": "D",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "218.7 KB",
+    "multipaginas": false
+  },
+  "26": {
+    "id": 26,
+    "imageUrl": "/questions/questao_26.png",
+    "width": 1615,
+    "height": 441,
+    "correctAnswer": "E",
+    "discipline": "Portugues",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "91.0 KB",
+    "multipaginas": false
+  },
+  "27": {
+    "id": 27,
+    "imageUrl": "/questions/questao_27.png",
+    "width": 1615,
+    "height": 407,
+    "correctAnswer": "A",
+    "discipline": "Portugues",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "44.9 KB",
+    "multipaginas": true
+  },
+  "28": {
+    "id": 28,
+    "imageUrl": "/questions/questao_28.png",
+    "width": 1615,
+    "height": 865,
+    "correctAnswer": "D",
+    "discipline": "Matematica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "191.7 KB",
+    "multipaginas": false
+  },
+  "29": {
+    "id": 29,
+    "imageUrl": "/questions/questao_29.png",
+    "width": 1615,
+    "height": 1148,
+    "correctAnswer": "E",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "231.7 KB",
+    "multipaginas": false
+  },
+  "30": {
+    "id": 30,
+    "imageUrl": "/questions/questao_30.png",
+    "width": 1615,
+    "height": 966,
+    "correctAnswer": "A",
+    "discipline": "Raciocinio Logico",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "205.1 KB",
+    "multipaginas": true
+  },
+  "31": {
+    "id": 31,
+    "imageUrl": "/questions/questao_31.png",
+    "width": 1615,
+    "height": 677,
+    "correctAnswer": "D",
+    "discipline": "Geografia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "174.4 KB",
+    "multipaginas": false
+  },
+  "32": {
+    "id": 32,
+    "imageUrl": "/questions/questao_32.png",
+    "width": 1615,
+    "height": 484,
+    "correctAnswer": "D",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "117.7 KB",
+    "multipaginas": false
+  },
+  "33": {
+    "id": 33,
+    "imageUrl": "/questions/questao_33.png",
+    "width": 1615,
+    "height": 2340,
+    "correctAnswer": "E",
+    "discipline": "Quimica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "489.4 KB",
+    "multipaginas": true
+  },
+  "34": {
+    "id": 34,
+    "imageUrl": "/questions/questao_34.png",
+    "width": 1615,
+    "height": 432,
+    "correctAnswer": "E",
+    "discipline": "Portugues",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "65.8 KB",
+    "multipaginas": true
+  },
+  "35": {
+    "id": 35,
+    "imageUrl": "/questions/questao_35.png",
+    "width": 1615,
+    "height": 417,
+    "correctAnswer": "D",
+    "discipline": "Portugues",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "94.3 KB",
+    "multipaginas": false
+  },
+  "36": {
+    "id": 36,
+    "imageUrl": "/questions/questao_36.png",
+    "width": 1615,
+    "height": 996,
+    "correctAnswer": "C",
+    "discipline": "Ingles",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "1150.5 KB",
+    "multipaginas": false
+  },
+  "37": {
+    "id": 37,
+    "imageUrl": "/questions/questao_37.png",
+    "width": 1615,
+    "height": 514,
+    "correctAnswer": "A",
+    "discipline": "Geografia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "93.0 KB",
+    "multipaginas": true
+  },
+  "38": {
+    "id": 38,
+    "imageUrl": "/questions/questao_38.png",
+    "width": 1615,
+    "height": 483,
+    "correctAnswer": "D",
+    "discipline": "Raciocinio Logico",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "82.5 KB",
+    "multipaginas": false
+  },
+  "39": {
+    "id": 39,
+    "imageUrl": "/questions/questao_39.png",
+    "width": 1615,
+    "height": 663,
+    "correctAnswer": "A",
+    "discipline": "Fisica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "163.0 KB",
+    "multipaginas": false
+  },
+  "40": {
+    "id": 40,
+    "imageUrl": "/questions/questao_40.png",
+    "width": 1615,
+    "height": 802,
+    "correctAnswer": "E",
+    "discipline": "Biologia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "177.8 KB",
+    "multipaginas": true
+  },
+  "41": {
+    "id": 41,
+    "imageUrl": "/questions/questao_41.png",
+    "width": 1615,
+    "height": 807,
+    "correctAnswer": "C",
+    "discipline": "Historia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "196.6 KB",
+    "multipaginas": false
+  },
+  "42": {
+    "id": 42,
+    "imageUrl": "/questions/questao_42.png",
+    "width": 1615,
+    "height": 1101,
+    "correctAnswer": "B",
+    "discipline": "Fisica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "226.8 KB",
+    "multipaginas": true
+  },
+  "43": {
+    "id": 43,
+    "imageUrl": "/questions/questao_43.png",
+    "width": 1615,
+    "height": 686,
+    "correctAnswer": "D",
+    "discipline": "Geografia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "103.0 KB",
+    "multipaginas": false
+  },
+  "44": {
+    "id": 44,
+    "imageUrl": "/questions/questao_44.png",
+    "width": 1615,
+    "height": 438,
+    "correctAnswer": "C",
+    "discipline": "Matematica",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "77.4 KB",
+    "multipaginas": false
+  },
+  "45": {
+    "id": 45,
+    "imageUrl": "/questions/questao_45.png",
+    "width": 1615,
+    "height": 796,
+    "correctAnswer": "C",
+    "discipline": "Historia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "162.4 KB",
+    "multipaginas": true
+  },
+  "46": {
+    "id": 46,
+    "imageUrl": "/questions/questao_46.png",
+    "width": 1615,
+    "height": 1431,
+    "correctAnswer": "E",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "286.5 KB",
+    "multipaginas": false
+  },
+  "47": {
+    "id": 47,
+    "imageUrl": "/questions/questao_47.png",
+    "width": 1615,
+    "height": 1512,
+    "correctAnswer": "C",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "283.2 KB",
+    "multipaginas": true
+  },
+  "48": {
+    "id": 48,
+    "imageUrl": "/questions/questao_48.png",
+    "width": 1615,
+    "height": 1004,
+    "correctAnswer": "B",
+    "discipline": "Portugues",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "841.4 KB",
+    "multipaginas": false
+  },
+  "49": {
+    "id": 49,
+    "imageUrl": "/questions/questao_49.png",
+    "width": 1615,
+    "height": 334,
+    "correctAnswer": "A",
+    "discipline": "Ingles",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "42.3 KB",
+    "multipaginas": false
+  },
+  "50": {
+    "id": 50,
+    "imageUrl": "/questions/questao_50.png",
+    "width": 1615,
+    "height": 325,
+    "correctAnswer": "E",
+    "discipline": "Ingles",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "65.9 KB",
+    "multipaginas": false
+  },
+  "51": {
+    "id": 51,
+    "imageUrl": "/questions/questao_51.png",
+    "width": 1615,
+    "height": 495,
+    "correctAnswer": "D",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "114.8 KB",
+    "multipaginas": false
+  },
+  "52": {
+    "id": 52,
+    "imageUrl": "/questions/questao_52.png",
+    "width": 1615,
+    "height": 830,
+    "correctAnswer": "A",
+    "discipline": "Raciocinio Logico",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "174.2 KB",
+    "multipaginas": true
+  },
+  "53": {
+    "id": 53,
+    "imageUrl": "/questions/questao_53.png",
+    "width": 1615,
+    "height": 637,
+    "correctAnswer": "C",
+    "discipline": "Multidisciplinar",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "163.1 KB",
+    "multipaginas": false
+  },
+  "54": {
+    "id": 54,
+    "imageUrl": "/questions/questao_54.png",
+    "width": 1615,
+    "height": 699,
+    "correctAnswer": "E",
+    "discipline": "Historia",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "fileSize": "179.3 KB",
+    "multipaginas": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Simulado-Vestibular-FATEC/static/css/main.9042cc3f.css",
+    "main.js": "/Simulado-Vestibular-FATEC/static/js/main.13368cfb.js",
+    "index.html": "/Simulado-Vestibular-FATEC/index.html",
+    "main.9042cc3f.css.map": "/Simulado-Vestibular-FATEC/static/css/main.9042cc3f.css.map",
+    "main.13368cfb.js.map": "/Simulado-Vestibular-FATEC/static/js/main.13368cfb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9042cc3f.css",
+    "static/js/main.13368cfb.js"
+  ]
+}
