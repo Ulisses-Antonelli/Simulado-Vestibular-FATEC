@@ -1,0 +1,121 @@
+:root {
+  --color1: #4b425b;
+  --color2: #584e68;
+  --color3: #645a75;
+  --color4: #716782;
+  --color5: #7e738f;
+}
+
+.filters-container {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color3);
+}
+
+.filter-select {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color1);
+}
+
+.filter-select:hover {
+  border-color: var(--color4);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color4);
+  box-shadow: 0 0 0 3px rgba(126, 115, 143, 0.1);
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-toggle-gabarito,
+.btn-reset {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 140px;
+}
+
+.btn-toggle-gabarito {
+  background: var(--color5);
+  color: white;
+}
+
+.btn-toggle-gabarito:hover {
+  background: var(--color4);
+  transform: translateY(-2px);
+}
+
+.btn-toggle-gabarito.active {
+  background: var(--color3);
+}
+
+.btn-reset {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.btn-reset:hover {
+  background: #ffe0b2;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    padding: 12px;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+  }
+
+  .btn-toggle-gabarito,
+  .btn-reset {
+    width: 100%;
+    min-width: auto;
+  }
+}
