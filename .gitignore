@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# PDFs originais das provas (não necessários para o sistema)
+public/Exams/
