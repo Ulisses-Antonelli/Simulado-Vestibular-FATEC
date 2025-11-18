@@ -125,7 +125,7 @@ function App() {
                 >
                   <Question
                     numero={numero}
-                    imagemUrl={`/questions/fatec/${provaSelecionada}/clean/questao_${String(numero).padStart(2, '0')}.png`}
+                    imagemUrl={`${process.env.PUBLIC_URL}/questions/fatec/${provaSelecionada}/clean/questao_${String(numero).padStart(2, '0')}.png`}
                     respostaSelecionada={respostas[numero] || null}
                     onSelectResposta={handleSelectResposta}
                     mostrarGabarito={mostrarGabarito}
