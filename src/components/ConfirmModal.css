@@ -1,0 +1,182 @@
+:root {
+  --neon-green: #00ff41;
+  --dark-bg-light: #1a1f3a;
+  --dark-bg-lighter: #252a47;
+  --text-light: #e0e0e0;
+}
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 14, 39, 0.9);
+  z-index: 10000;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Container do Modal */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dark-bg-light);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 255, 65, 0.3);
+  border: 2px solid var(--neon-green);
+  z-index: 10001;
+  min-width: 400px;
+  max-width: 90vw;
+  animation: slideIn 0.3s ease;
+}
+
+/* Header do Modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 2px solid var(--dark-bg-lighter);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.modal-close:hover {
+  background: var(--dark-bg-lighter);
+  color: var(--neon-green);
+  transform: scale(1.1);
+}
+
+/* Footer do Modal */
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 24px;
+}
+
+/* Botões do Modal */
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botão Limpar Prova Atual */
+.modal-btn-current {
+  background: var(--neon-green);
+  color: var(--dark-bg-light);
+}
+
+.modal-btn-current:hover {
+  background: var(--neon-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.5);
+}
+
+/* Botão Limpar Todas */
+.modal-btn-all {
+  background: #ff4141;
+  color: white;
+}
+
+.modal-btn-all:hover {
+  background: #e63939;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 65, 65, 0.5);
+}
+
+/* Botão Cancelar */
+.modal-btn-cancel {
+  background: var(--dark-bg-lighter);
+  color: var(--text-light);
+}
+
+.modal-btn-cancel:hover {
+  background: var(--dark-bg-lighter);
+  color: white;
+  opacity: 0.8;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .modal-container {
+    min-width: 320px;
+    max-width: 90vw;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-header h3 {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .modal-footer {
+    padding: 16px 20px;
+  }
+
+  .modal-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .modal-btn-icon {
+    font-size: 16px;
+  }
+}
