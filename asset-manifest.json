@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Simulado-Vestibular-FATEC/static/css/main.3d17f6d9.css",
-    "main.js": "/Simulado-Vestibular-FATEC/static/js/main.fa4a537b.js",
+    "main.css": "/Simulado-Vestibular-FATEC/static/css/main.0552d687.css",
+    "main.js": "/Simulado-Vestibular-FATEC/static/js/main.db3f941d.js",
     "index.html": "/Simulado-Vestibular-FATEC/index.html",
-    "main.3d17f6d9.css.map": "/Simulado-Vestibular-FATEC/static/css/main.3d17f6d9.css.map",
-    "main.fa4a537b.js.map": "/Simulado-Vestibular-FATEC/static/js/main.fa4a537b.js.map"
+    "main.0552d687.css.map": "/Simulado-Vestibular-FATEC/static/css/main.0552d687.css.map",
+    "main.db3f941d.js.map": "/Simulado-Vestibular-FATEC/static/js/main.db3f941d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d17f6d9.css",
-    "static/js/main.fa4a537b.js"
+    "static/css/main.0552d687.css",
+    "static/js/main.db3f941d.js"
   ]
 }
