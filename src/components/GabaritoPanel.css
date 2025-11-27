@@ -1,23 +1,23 @@
 :root {
-  --color1: #4b425b;
-  --color2: #584e68;
-  --color3: #645a75;
-  --color4: #716782;
-  --color5: #7e738f;
-  --color-correct: #81c784;
-  --color-wrong: #e57373;
+  --neon-green: #00ff41;
+  --dark-bg-light: #1a1f3a;
+  --dark-bg-lighter: #252a47;
+  --text-light: #e0e0e0;
+  --color-correct: #00ff41;
+  --color-wrong: #ff4141;
 }
 
 .gabarito-panel {
-  background: white;
+  background: var(--dark-bg-light);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 255, 65, 0.1);
+  border: 1px solid var(--dark-bg-lighter);
 }
 
 .gabarito-panel h3 {
   margin: 0 0 16px 0;
-  color: var(--color1);
+  color: var(--neon-green);
   font-size: 18px;
   font-weight: 600;
   text-align: center;
@@ -27,14 +27,15 @@
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   gap: 0;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--dark-bg-lighter);
 }
 
 .gabarito-item {
   aspect-ratio: 1;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--dark-bg-lighter);
   border-radius: 0;
-  background: white;
+  background: var(--dark-bg-lighter);
+  color: var(--text-light);
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
@@ -50,26 +51,29 @@
 
 .gabarito-item:hover {
   transform: scale(1.08);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.4);
   z-index: 1;
+  border-color: var(--neon-green);
 }
 
 .gabarito-item.nao-respondida {
-  background: #f5f5f5;
-  color: #999;
-  border-color: #ddd;
+  background: var(--dark-bg-lighter);
+  color: #666;
+  border-color: var(--dark-bg-lighter);
 }
 
 .gabarito-item.acerto {
   background: var(--color-correct);
-  border: 1px solid #e0e0e0;
-  color: white;
+  border: 1px solid var(--color-correct);
+  color: var(--dark-bg-light);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
 }
 
 .gabarito-item.erro {
   background: var(--color-wrong);
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--color-wrong);
   color: white;
+  box-shadow: 0 0 8px rgba(255, 65, 65, 0.3);
 }
 
 .questao-numero {
@@ -81,7 +85,7 @@
 @media (max-width: 1200px) {
   .gabarito-panel {
     position: static;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .gabarito-grid {
@@ -89,13 +93,72 @@
   }
 }
 
+/* Header com toggle para mobile */
+.gabarito-header {
+  display: none;
+}
+
+.gabarito-toggle {
+  display: none;
+}
+
+.gabarito-content {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .gabarito-panel {
-    padding: 16px;
+    padding: 12px 16px;
+    margin: 2px 0px;
+    background: var(--dark-bg-light);
+    border: 1px solid var(--neon-green);
+  }
+
+  .gabarito-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
   }
 
   .gabarito-panel h3 {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
+    color: var(--neon-green);
+  }
+
+  .gabarito-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--neon-green);
+    transition: transform 0.2s ease;
+  }
+
+  .gabarito-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .gabarito-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  }
+
+  .gabarito-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  .gabarito-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 12px;
   }
 
   .gabarito-grid {
