@@ -1,6 +1,6 @@
 import React from 'react';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import './Filters.css';
 
 /**
@@ -63,28 +63,16 @@ const Filters = ({
           className={`btn-toggle-gabarito ${mostrarGabarito ? 'active' : ''}`}
           onClick={onToggleGabarito}
         >
-          {mostrarGabarito ? (
-            <>
-              <VisibilityOffIcon fontSize="small" style={{ marginRight: '6px' }} />
-              Ocultar Gabarito
-            </>
-          ) : (
-            <>
-              <VisibilityIcon fontSize="small" style={{ marginRight: '6px' }} />
-              Mostrar Gabarito
-            </>
-          )}
+          <VisibilityOutlinedIcon fontSize="small" style={{ marginRight: '6px' }} />
+          Ver Gabarito
         </button>
 
         <button
           className="btn-reset"
-          onClick={() => {
-            if (window.confirm('Tem certeza que deseja limpar todas as respostas? Esta ação não pode ser desfeita.')) {
-              onResetRespostas();
-            }
-          }}
+          onClick={onResetRespostas}
         >
-          🔄 Limpar Respostas
+          <DeleteOutlineIcon fontSize="small" style={{ marginRight: '6px' }} />
+          Limpar Respostas
         </button>
       </div>
     </div>

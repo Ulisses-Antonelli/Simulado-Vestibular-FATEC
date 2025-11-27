@@ -1,8 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Question from './components/Question';
 import GabaritoPanel from './components/GabaritoPanel';
 import Statistics from './components/Statistics';
 import Filters from './components/Filters';
+import ConfirmModal from './components/ConfirmModal';
+import GabaritoModal from './components/GabaritoModal';
 import { useLocalStorage, useRespostas } from './hooks/useLocalStorage';
 import './styles/App.css';
 
@@ -16,8 +18,14 @@ function App() {
   // Estado para disciplina selecionada
   const [disciplinaSelecionada, setDisciplinaSelecionada] = useLocalStorage('fatec-disciplina-selecionada', 'todas');
 
-  // Estado para mostrar/ocultar gabarito
-  const [mostrarGabarito, setMostrarGabarito] = useLocalStorage('fatec-mostrar-gabarito', false);
+  // Estado para controlar drawer do gabarito (mobile landscape)
+  const [gabaritoDrawerAberto, setGabaritoDrawerAberto] = useLocalStorage('fatec-gabarito-drawer', false);
+
+  // Estado para controlar modal de confirmação
+  const [modalAberto, setModalAberto] = useState(false);
+
+  // Estado para controlar modal de gabarito
+  const [gabaritoModalAberto, setGabaritoModalAberto] = useState(false);
 
   // Buscar dados da prova selecionada
   const provaAtual = provasConfig.provas.find(p => p.id === provaSelecionada);
@@ -58,19 +66,56 @@ function App() {
 
   // Handler para mudar prova
   const handleChangeProva = (novaProva) => {
-    if (window.confirm('Ao trocar de prova, as respostas atuais serão mantidas. Deseja continuar?')) {
-      setProvaSelecionada(novaProva);
-      setDisciplinaSelecionada('todas');
-    }
+    setProvaSelecionada(novaProva);
+    setDisciplinaSelecionada('todas');
   };
 
-  // Handler para resetar respostas
+  // Handler para abrir modal de resetar respostas
   const handleResetRespostas = () => {
+    setModalAberto(true);
+  };
+
+  // Handler para limpar apenas a prova atual
+  const handleLimparProvaAtual = () => {
     resetRespostas();
+    setModalAberto(false);
+  };
+
+  // Handler para limpar todas as provas
+  const handleLimparTodasProvas = () => {
+    // Limpar todas as provas
+    provasConfig.provas.forEach(prova => {
+      window.localStorage.setItem(`fatec-respostas-${prova.id}`, JSON.stringify({}));
+    });
+    resetRespostas(); // Atualizar estado atual
+    setModalAberto(false);
+  };
+
+  // Handler para toggle do gabarito modal
+  const handleToggleGabarito = () => {
+    setGabaritoModalAberto(!gabaritoModalAberto);
   };
 
   return (
     <div className="app">
+      {/* Modal de Confirmação */}
+      <ConfirmModal
+        isOpen={modalAberto}
+        onClose={() => setModalAberto(false)}
+        onConfirmCurrent={handleLimparProvaAtual}
+        onConfirmAll={handleLimparTodasProvas}
+        currentExamName={provaAtual.nome}
+      />
+
+      {/* Modal de Gabarito */}
+      <GabaritoModal
+        isOpen={gabaritoModalAberto}
+        onClose={() => setGabaritoModalAberto(false)}
+        gabarito={gabarito}
+        totalQuestoes={provaAtual.totalQuestoes}
+        provaName={provaAtual.nome}
+      />
+
       {/* Header */}
       <header className="app-header">
         <div className="container">
@@ -84,22 +129,80 @@ function App() {
         <div className="app-content">
           {/* Sidebar */}
           <aside className="sidebar">
-            <Statistics
-              respostas={respostas}
-              gabarito={gabarito}
-              totalQuestoes={provaAtual.totalQuestoes}
-              disciplinas={provaAtual.disciplinas}
-              mostrarGabarito={mostrarGabarito}
-            />
+            {/* Cabeçalho da sidebar com botão hambúrguer (landscape) */}
+            <div className="sidebar-header-landscape">
+              <Statistics
+                respostas={respostas}
+                gabarito={gabarito}
+                totalQuestoes={provaAtual.totalQuestoes}
+                disciplinas={provaAtual.disciplinas}
+              />
+              <button
+                className="gabarito-hamburger-btn"
+                onClick={() => setGabaritoDrawerAberto(!gabaritoDrawerAberto)}
+                title="Ver gabarito"
+              >
+                <span className="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <span className="hamburger-label">Gabarito</span>
+              </button>
+            </div>
 
-            <GabaritoPanel
-              totalQuestoes={provaAtual.totalQuestoes}
-              respostas={respostas}
-              gabarito={gabarito}
-              onQuestaoClick={scrollToQuestao}
-              mostrarGabarito={mostrarGabarito}
-            />
+            {/* Statistics (modo normal) */}
+            <div className="sidebar-stats-normal">
+              <Statistics
+                respostas={respostas}
+                gabarito={gabarito}
+                totalQuestoes={provaAtual.totalQuestoes}
+                disciplinas={provaAtual.disciplinas}
+              />
+            </div>
+
+            {/* Gabarito Panel (modo normal) */}
+            <div className="sidebar-gabarito-normal">
+              <GabaritoPanel
+                totalQuestoes={provaAtual.totalQuestoes}
+                respostas={respostas}
+                gabarito={gabarito}
+                onQuestaoClick={scrollToQuestao}
+              />
+            </div>
           </aside>
+
+          {/* Drawer do Gabarito (mobile landscape) */}
+          {gabaritoDrawerAberto && (
+            <>
+              <div
+                className="gabarito-drawer-overlay"
+                onClick={() => setGabaritoDrawerAberto(false)}
+              />
+              <div className="gabarito-drawer">
+                <div className="gabarito-drawer-header">
+                  <h3>Gabarito</h3>
+                  <button
+                    className="gabarito-drawer-close"
+                    onClick={() => setGabaritoDrawerAberto(false)}
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="gabarito-drawer-content">
+                  <GabaritoPanel
+                    totalQuestoes={provaAtual.totalQuestoes}
+                    respostas={respostas}
+                    gabarito={gabarito}
+                    onQuestaoClick={(numero) => {
+                      scrollToQuestao(numero);
+                      setGabaritoDrawerAberto(false);
+                    }}
+                  />
+                </div>
+              </div>
+            </>
+          )}
 
           {/* Main Area */}
           <main className="main-content">
@@ -111,8 +214,8 @@ function App() {
               disciplinaSelecionada={disciplinaSelecionada}
               onChangeProva={handleChangeProva}
               onChangeDisciplina={setDisciplinaSelecionada}
-              mostrarGabarito={mostrarGabarito}
-              onToggleGabarito={() => setMostrarGabarito(!mostrarGabarito)}
+              mostrarGabarito={gabaritoModalAberto}
+              onToggleGabarito={handleToggleGabarito}
               onResetRespostas={handleResetRespostas}
             />
 
@@ -125,10 +228,9 @@ function App() {
                 >
                   <Question
                     numero={numero}
-                    imagemUrl={`${process.env.PUBLIC_URL}/questions/fatec/${provaSelecionada}/clean/questao_${String(numero).padStart(2, '0')}.png`}
+                    imagemUrl={`${process.env.PUBLIC_URL}/questions/fatec/${provaSelecionada}/questao_${String(numero).padStart(2, '0')}.png`}
                     respostaSelecionada={respostas[numero] || null}
                     onSelectResposta={handleSelectResposta}
-                    mostrarGabarito={mostrarGabarito}
                     respostaCorreta={gabarito[numero]}
                     disabled={false}
                   />
