@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * Hook personalizado para persistir estado no localStorage
@@ -53,17 +53,42 @@ export const useLocalStorage = (key, initialValue) => {
  * @returns {Object} - Objeto com respostas e funções de gerenciamento
  */
 export const useRespostas = (provaId) => {
-  const [respostas, setRespostas] = useLocalStorage(`fatec-respostas-${provaId}`, {});
+  const [respostas, setRespostas] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(`fatec-respostas-${provaId}`);
+      return item ? JSON.parse(item) : {};
+    } catch (error) {
+      console.error('Erro ao carregar respostas:', error);
+      return {};
+    }
+  });
+
+  // Atualizar respostas quando provaId mudar
+  useEffect(() => {
+    try {
+      const item = window.localStorage.getItem(`fatec-respostas-${provaId}`);
+      setRespostas(item ? JSON.parse(item) : {});
+    } catch (error) {
+      console.error('Erro ao carregar respostas:', error);
+      setRespostas({});
+    }
+  }, [provaId]);
 
   const setResposta = (numeroQuestao, resposta) => {
-    setRespostas((prev) => ({
-      ...prev,
-      [numeroQuestao]: resposta
-    }));
+    setRespostas((prev) => {
+      const novasRespostas = {
+        ...prev,
+        [numeroQuestao]: resposta
+      };
+      // Salvar no localStorage
+      window.localStorage.setItem(`fatec-respostas-${provaId}`, JSON.stringify(novasRespostas));
+      return novasRespostas;
+    });
   };
 
   const resetRespostas = () => {
     setRespostas({});
+    window.localStorage.setItem(`fatec-respostas-${provaId}`, JSON.stringify({}));
   };
 
   const getTotalRespondidas = () => {
