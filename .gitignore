@@ -24,3 +24,7 @@ yarn-error.log*
 
 # PDFs originais das provas (não necessários para o sistema)
 public/Exams/
+
+# Scripts e arquivos temporários
+extract-clean.py
+nul
